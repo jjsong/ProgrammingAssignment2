@@ -1,5 +1,3 @@
-
-
 # create a special "matrix" object 
 makeCacheMatrix <- function(x = matrix()) {    
         invX <- NULL
@@ -15,14 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
              getInverse = getInverse)
 }
 
-### usage
-a <- makeCacheMatrix(matrix(1:4,2))
-a$get()
-a$getInverse()
-a$set(matrix(5:8,2))
-a$get()
 
-?solve()
 
 # calculage the inverse of the special "matrix" returned by makeCacheMatrix()
 cacheSolve <- function(x, ...) {
@@ -37,16 +28,5 @@ cacheSolve <- function(x, ...) {
         return(invX)                         # return the result
         
 }
-
-
-### usage : 
-cacheSolve(a)
-cacheSolve(a)
-a$getInverse()
-b = a$getInverse()
-a$get() %*% b     #matrix multiplication should show identity matrix
-
-
-
 
 
